@@ -40,4 +40,13 @@
 
 ## 发布验收
 
-发布后追加仓库、Actions及匿名访问结果。该部分在远端验证成功前不标记完成。
+已完成公开发布与匿名浏览器验收：
+
+- [公开仓库](https://github.com/madongchen57-ops/international-communist-atlas)，默认分支main。
+- [公开网站](https://madongchen57-ops.github.io/international-communist-atlas/)，无登录、无Cookie的新浏览器会话访问成功。
+- [实现版本的Actions部署记录](https://github.com/madongchen57-ops/international-communist-atlas/actions/runs/40177434633)：构建、测试、产物上传和部署全部成功。
+- 在线17页返回200；212个地图参考面正常加载，2026截面的中性模式中国仍为红色，四组南海群岛标注均归中国。
+- 在线中文搜索高亮及文献段落深链有效，无新增404或脚本异常。
+- 从Git源码归档提取到干净目录后，独立构建与静态检查再次通过；原始文件的跨平台字节由Git属性保护。
+
+在线验收时间：2026-10-25 16:40（北京时间）。可复查的精简结果见 `docs/validation-results.json`。后续仅补充本报告及验收脚本，不改变已验证的网站内容。

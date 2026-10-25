@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-25",
+  "implementationCommit": "38f782d888bea674518afb5b95dce3916095b73d",
+  "buildAndStaticChecks": "passed",
+  "cleanArchiveBuild": "passed",
+  "browser": [
+    {
+      "name": "24 stages x 3 modes, China post-1949 red and earlier historical",
+      "pass": true
+    },
+    {
+      "name": "Xisha/Nansha ownership, inset keyboard selection",
+      "pass": true
+    },
+    {
+      "name": "Wheel zoom and capitals only after selecting and 180%",
+      "pass": true
+    },
+    {
+      "name": "Independent site search, snippets and Chinese query",
+      "pass": true
+    },
+    {
+      "name": "All 17 pages, prefix, eight reading IDs; no runtime errors",
+      "pass": true
+    },
+    {
+      "name": "Reading settings, note add/edit/restore/export/delete, bookmark, focus",
+      "pass": true
+    },
+    {
+      "name": "Invalid paragraph does not restore history silently",
+      "pass": true
+    },
+    {
+      "name": "Theme and cursor persist across pages",
+      "pass": true
+    },
+    {
+      "name": "Phone map, calendar and long reading have no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "Storage unavailable: warning, note session and export remain",
+      "pass": true
+    },
+    {
+      "name": "Map failure fallback retains China policy, retry recovers",
+      "pass": true
+    },
+    {
+      "name": "No added errors or missing runtime resources",
+      "pass": true
+    }
+  ],
+  "published": {
+    "url": "https://madongchen57-ops.github.io/international-communist-atlas/",
+    "anonymousAccess": true,
+    "htmlPages": 17,
+    "mapFeatures": 212,
+    "china2026NeutralRed": true,
+    "southChinaSeaOwnership": true,
+    "searchHighlight": true,
+    "readingDeepLink": true,
+    "runtimeErrors": [],
+    "verifiedAt": "2026-10-25T08:40:43.591Z"
+  },
+  "original": {
+    "originalFiles": 8299,
+    "currentFiles": 8299,
+    "changed": [],
+    "missing": [],
+    "added": [],
+    "unchanged": true
+  }
+}
