@@ -1,0 +1,3 @@
+* text=auto eol=lf
+# Frozen evidence must retain byte-for-byte hashes across Windows/Linux.
+sources/** -text

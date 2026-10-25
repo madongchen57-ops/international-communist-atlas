@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国际共运 · 世界地图与历史图志 | 青年马列毛主义驿站</title>
+    <meta name="description" content="自然资源部标准地图服务系统底图，滚轮缩放与24个历史截面；分别阅读社会主义国家制度沿革、路线判断、国际阵营与当代组织资料。">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/international-atlas.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <main class="intl-page">
+        <header class="intl-hero">
+            <div><span class="intl-eyebrow">INTERNATIONAL · 历史与现实</span><h1>把世界展开，<br>把历史读深。</h1><p>国际共产主义运动图志 · 1848—2026<br>从工人国际、民族解放到今天仍在发展的不同组织，沿着地点、年代与文献，辨认共同的历史和分岔的道路。</p></div>
+            <nav class="intl-hero-links" aria-label="国际共运栏目"><a href="international.html?view=organizations#atlasExplorer">当代组织 ↓</a><a href="international-calendar.html">历史日历 ↗</a><a href="international-column.html">深度专栏 ↗</a><a href="international-current.html">时事 ↗</a><a href="international-memorial.html">纪念 ↗</a></nav>
+        </header>
+        <div class="atlas-stats" aria-label="本页收录资料"><span><strong id="atlasEventCount">—</strong>历史节点</span><span><strong id="atlasOrgCount">—</strong>组织资料</span><span><strong id="atlasSnapshotCount">—</strong>地图截面</span><span><strong id="atlasStateCount">—</strong>国家／政权记录</span><span><strong id="atlasSourceCount">—</strong>节点与组织出处</span><span>资料整理：2026.10.25</span></div>
+
+        <section class="atlas-shell" aria-labelledby="atlasTitle">
+            <header class="atlas-toolbar"><div><h2 id="atlasTitle">国际共运 · 历史阵营地图</h2><p>中国自然资源部标准地图服务系统底图 · 滚轮缩放，按住拖动</p></div><div class="atlas-controls" role="group" aria-label="地图视角">
+                <button type="button" data-projection="flat" aria-pressed="true">世界全图</button>
+                <button type="button" id="atlasZoomIn" aria-label="放大地图">＋</button><button type="button" id="atlasZoomOut" aria-label="缩小地图">−</button><button type="button" id="atlasResetCamera">复位</button><button type="button" id="atlasTouchDrag" aria-pressed="false">触屏拖动</button>
+            </div></header>
+            <div class="atlas-camp-controls" id="atlasCampControls" inert>
+                <label>历史阶段<select id="atlasSnapshot" aria-label="地图历史阶段"></select></label>
+                <label>国家底色<select id="atlasColorLayer" aria-label="地图国家底色"><option value="nature">制度与路线分期</option><option value="camps">条约与国家阵营</option><option value="neutral">中性地理底色</option></select></label>
+                <label>选择国家／加盟共和国<select id="atlasState" aria-label="地图国家或加盟共和国"><option value="">请选择</option></select></label>
+                <label>地方武装资料<select id="atlasArmedArea" aria-label="地方武装活动范围"><option value="">不叠加</option><option value="india-2024">印度 · 2024年受影响邦（非控制区）</option></select></label>
+            </div>
+            <p id="atlasSnapshotNote" class="atlas-map-note" role="status"></p>
+            <div class="atlas-layout"><div>
+                <div class="atlas-viewport">
+                    <svg id="atlasSvg" class="atlas-svg" viewBox="0 0 1000 560" role="group" aria-label="可交互世界地图，鼠标滚轮缩放，方向键平移，加减键缩放" tabindex="0" data-gesture="false">
+                        <title>国际共产主义运动地理图</title><desc>现代参考底图。按下Tab可选择国别标点，Enter或空格筛选；也可使用下方文字列表。</desc>
+                        <defs><clipPath id="atlasFrameClip" clipPathUnits="userSpaceOnUse"><rect x="0" y="0" width="1000" height="560"/></clipPath><clipPath id="atlasWorldClip"><path id="atlasWorldClipPath"/></clipPath><clipPath id="atlasIndiaClip"><path id="atlasIndiaClipPath"/></clipPath><pattern id="atlasMixedPattern" width="8" height="8" patternUnits="userSpaceOnUse"><rect width="8" height="8" fill="#b595ca"/><path d="M-2,2L2,-2M0,8L8,0M6,10L10,6" stroke="#334969" stroke-width="2"/></pattern><pattern id="atlasArmedPattern" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0,7L7,0" stroke="#ffac54" stroke-width="2"/></pattern></defs>
+                        <g clip-path="url(#atlasFrameClip)"><g id="atlasScene" clip-path="url(#atlasWorldClip)"><path id="atlasSphere" class="atlas-sphere"></path><g id="atlasLand"></g><path id="atlasGraticule" class="atlas-graticule"></path><g id="atlasArmedShapes"></g><g id="atlasBoundaries"></g><g id="atlasCapitals"></g><g id="atlasMarkers"></g></g></g>
+                    </svg>
+                    <img id="atlasFallback" class="atlas-fallback" alt="依据自然资源部标准地图服务系统底图绘制的世界地图；互动不可用时请使用文字列表" hidden>
+                    <div id="atlasMapLoading" class="atlas-loading">正在展开世界地图…</div>
+                </div>
+                <p id="atlasMapStatus" class="atlas-map-note" role="status" aria-live="polite">正在准备地理底图</p>
+                <div id="atlasMapError" class="atlas-load-error" hidden>互动地图暂未载入，已改为官方静态底图预览；此图没有阵营着色，文字资料仍可使用。<button id="atlasRetryMap" type="button">重试地图</button></div>
+            </div><aside id="atlasDetail" class="atlas-detail" aria-label="地图选中条目"></aside></div>
+            <ul id="atlasCampLegend" class="atlas-legend atlas-camp-legend" aria-label="国家阵营底色图例"></ul>
+            <details class="atlas-camp-method"><summary>查看本阶段国家清单、联邦结构与着色依据</summary><div id="atlasCampDirectory"></div></details>
+            <div id="atlasArmedNotes" class="atlas-map-note" hidden></div>
+            <ul id="atlasLegend" class="atlas-legend" aria-label="条目类别图例"></ul>
+            <p class="atlas-map-note">国家底色与事件圆点分别表示阵营归属和资料类别。底图采用官方现代参考边界，历史联邦按现代地理单元示意，不复原历史国境；首都须先选择社会主义国家，再放大至180%显示。台湾包含在中国面内；国界与未定界按源数据分别描绘。<a href="https://bzdt.ch.mnr.gov.cn/" target="_blank" rel="noopener">官方底图来源</a> · <a href="../../assets/international/SOURCES.json">数据与使用说明</a></p>
+        </section>
+
+        <section class="intl-explorer" id="atlasExplorer" aria-labelledby="explorerTitle">
+            <h2 id="explorerTitle">沿着历史读，带着问题看今天</h2>
+            <div class="atlas-tabs" role="group" aria-label="资料视图"><button class="atlas-tab" type="button" data-atlas-view="history" aria-pressed="true">历史节点</button><button class="atlas-tab" type="button" data-atlas-view="organizations" aria-pressed="false">当代组织与转型</button></div>
+            <form id="atlasFilters" class="atlas-filters" role="search" inert>
+                <label id="atlasEraLabel">历史分期<select name="era" aria-label="历史分期"><option value="all">全部时期</option></select></label>
+                <label>国家／地区<select name="country" aria-label="国家或地区"><option value="all">全部国家／地区</option></select></label>
+                <label><span id="atlasKindTitle">事件类别</span><select name="kind" aria-label="条目类别"><option value="all">全部类别</option></select></label>
+                <label id="atlasLineageLabel" hidden>思想传统<select name="lineage" aria-label="思想传统"><option value="all">全部思想传统</option></select></label>
+                <label class="atlas-query">全文查找<input type="search" name="query" placeholder="如：共产国际、土地、菲律宾、毛派" maxlength="200"></label><button type="reset">清除筛选</button>
+            </form>
+            <div id="atlasDataError" class="atlas-feature" role="alert" hidden>历史与组织资料暂未载入。<button id="atlasRetryData" type="button">重试资料</button></div>
+            <p id="atlasResultsStatus" class="atlas-status" role="status" aria-live="polite">正在载入历史节点与组织资料…</p>
+            <div id="atlasResults" class="atlas-results"></div><p id="atlasEmpty" class="atlas-status" hidden>没有匹配条目。可清除筛选，或改用组织简称、国名与概念查找。</p>
+        </section>
+
+        <section class="atlas-eras" aria-labelledby="eraTitle"><div class="atlas-section-head"><h2 id="eraTitle">六个时期，六组核心问题</h2><p>本站历史导读 · 事实节点与政治评价分别阅读</p></div><div id="atlasEraOverviews"></div></section>
+        <section class="atlas-feature" id="atlasStateHistories" aria-labelledby="stateHistoryTitle"><h2 id="stateHistoryTitle">逐国查看：制度、路线与历史转折</h2><p>历史共产党执政、人民民主国家与其他社会主义取向国家分开列示；同一国家的不同时期不能互相替代。年份精度的范围只写年份，不伪造具体日期；短期、分治和历史边界未复原的条目另作说明。</p><div id="atlasStateHistoryList"></div></section>
+        <section id="atlasComintern" class="atlas-feature" aria-label="共产国际专题"><h2>共产国际：国际团结的组织实践</h2></section>
+        <section class="atlas-feature" aria-labelledby="genealogyTitle"><h2 id="genealogyTitle">毛派运动的多条道路</h2><p>这是主要历史线索的导读，不是统一组织指挥关系图。相近的思想认同、同名组织与分裂后的主体分别说明。</p><div id="atlasGenealogy" class="genealogy-grid"></div></section>
+        <details class="atlas-sources" id="atlasBibliography"><summary>参考文献、资料时效与地理数据</summary><p class="atlas-source-policy">当事组织的文件用于说明其自我定位；政府报告、新闻和研究资料各自标明出处及观察立场。旧资料不冒充今日活动证据。历史事实、论争双方判断与本站导读分开。收录不是对组织全部言行的认同，也不是完整的世界组织名册。</p><p class="atlas-source-policy">底图来自自然资源部标准地图服务系统公开自助底图，保留原始平面投影与已定界、未定界等不同线型；台湾在中国面内，藏南按官方源数据描绘。历史专题叠加是本地示意，未冒用标准图审图号。现代几何不能代替历史疆界复原；城市符号通过经纬网插值作位置示意。全部运行资源保存在本地。<a href="../../assets/international/SOURCES.json">地理数据与来源记录</a> · <a href="../../data/international/atlas.json">本页结构化资料</a></p></details>
+        <noscript><p>开启JavaScript可使用筛选、定位和地图缩放。也可下载<a href="../../data/international/atlas.json">全部历史与组织资料</a>。</p><img class="atlas-fallback" src="../../assets/international/world-equal-earth.svg" alt="官方世界底图"></noscript>
+    </main>
+    <footer class="site-footer"><div class="container"><p>青年马列毛主义驿站 | 国际共产主义运动图志</p><p>历史有出处，判断有依据。</p></div></footer>
+    <script src="../../js/site-data.js"></script><script src="../../js/main.js"></script><script src="../../js/darkmode.js"></script>
+    <script defer src="../../js/international-atlas.js"></script>
+</body>
+</html>

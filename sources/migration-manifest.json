@@ -1,0 +1,138 @@
+{
+  "sourceRepository": "https://github.com/yidiao/QmlmReader",
+  "imported": "2026-10-25",
+  "files": [
+    {
+      "original": "html/international/international.html",
+      "sha256": "83e31696d120612809f2af7c306eeb2b7e67c683000fad99f7ecfa79bece15f1"
+    },
+    {
+      "original": "html/international/international-calendar.html",
+      "sha256": "b10e7aef7dcd86cf23a43978286afc0be76914ba440c3231fa9d703e6518da69"
+    },
+    {
+      "original": "html/international/international-column.html",
+      "sha256": "3030fa1bc3c083714a05b3909cb12b48489f40c6b966eb429213573232a1a506"
+    },
+    {
+      "original": "html/international/international-current.html",
+      "sha256": "3fd8c351244bb2651638934ed02c5747a69e7d0ad00cb8a8ac11d4eb6f2c89f2"
+    },
+    {
+      "original": "html/international/international-memorial.html",
+      "sha256": "29d8e00374e8622195a95a4abc26172c560c1ae65228805524a4988d34a6fbf9"
+    },
+    {
+      "original": "html/library/comintern.html",
+      "sha256": "216b4600b3650d901f97fc2edd1db90978556438607e861faa6619ddab86d5da"
+    },
+    {
+      "original": "html/international/international-column/encirclement.html",
+      "sha256": "2445c9dd22e5f2fba6b89697162ab4772dabdfe7b9680daf8d1faba5b7b6518b"
+    },
+    {
+      "original": "html/international/international-column/foundations.html",
+      "sha256": "b60e1440c4f29b56d3aa0cac7f0ae79c7ff36c60f083aff6323d5b44ef393220"
+    },
+    {
+      "original": "html/international/international-column/tieliu-yu-xianfeng.html",
+      "sha256": "c8ccb23fcfeb428e1753eb81c907a2542b933f690950a65816959e7b78528e29"
+    },
+    {
+      "original": "data/international/atlas.json",
+      "sha256": "94163ad0b73682200b99debc7fa21dd0df7517b47f89aadfbfd0ce3249e004fb"
+    },
+    {
+      "original": "data/international/state-periods-manifest.json",
+      "sha256": "742af216c00b9772bfc958eb9c4e6fd663490b6cf5209d08896865ba530aa1f6"
+    },
+    {
+      "original": "assets/international/world-50m.json",
+      "sha256": "49abfb8727c4bec91cc168c82d75b5867f44cb89f53f7e665690159f752f3f6b"
+    },
+    {
+      "original": "assets/international/world-equal-earth.svg",
+      "sha256": "9227b23093faab86ef392d2c9cefc06c13875d2c5a47afd1690382b3e51e8021"
+    },
+    {
+      "original": "assets/international/SOURCES.json",
+      "sha256": "a70c2b8526b0b255c8911e5c368970c05c91eb98a6da17770b18e39d46af7d27"
+    },
+    {
+      "original": ".sources-international/official-worldtopo-h.json",
+      "sha256": "046e0925ffa6f3d8a30861dbfc09e14671c8b546c0ebeabd315550f62fca30fb"
+    },
+    {
+      "original": ".sources-international/official-worldtopo-h.source.json",
+      "sha256": "37b22bc53e829339a644e5cd209883953050246564e0d8a29b4f59d34abfb8e4"
+    },
+    {
+      "original": ".sources-international/official-worldtopo.json",
+      "sha256": "7961557f92412079cf456368f4f343315771f07cb7db75331a0dd8a2fe011b0f"
+    },
+    {
+      "original": ".sources-international/official-worldtopo.source.json",
+      "sha256": "72b8a79af0c8efa28d16a25ad474d492d35b3b2e8d75e1d68fe1b96ee1187206"
+    },
+    {
+      "original": "html/articles/Marx/fa-lan-xi-nei-zhan.html",
+      "sha256": "13e5b9e3d599b658f1460285bef74e2e6573ad0c3cb41e40712fc4b27263bf72"
+    },
+    {
+      "original": "data/articles-json/Marx/fa-lan-xi-nei-zhan.json",
+      "sha256": "e0fb7d18309afa6494bd447cc3bd17208d232395415ef2d591c639a13776ab05"
+    },
+    {
+      "original": "html/articles/CriticismAuthorities/lenin-collapse-1915.html",
+      "sha256": "4476ea13fc0bb24bc87999b54e319f897b0479d34dafc99718a462dba9d4a3a8"
+    },
+    {
+      "original": "data/articles-json/CriticismAuthorities/lenin-collapse-1915.json",
+      "sha256": "ef9902a9a70dbca8fd38146e555fa7dc9207616a0e1434a129c5dfc7a39b643d"
+    },
+    {
+      "original": "html/articles/Lenin/guo-jia-yu-ge-ming.html",
+      "sha256": "3250d0c364776463bf8d2ceb3c3ae5ffe0e4de00522b709cc6b73fdbeca79ff9"
+    },
+    {
+      "original": "data/articles-json/Lenin/★★★★★/guo-jia-yu-ge-ming.json",
+      "sha256": "bf3bb44a93ab8edd11a6fd1c2c4c4c887eb9b68d9095e94150a412952560c02c"
+    },
+    {
+      "original": "html/articles/Stalin/lun-lunen-zhu-yi-ji-chu.html",
+      "sha256": "94b411ded4808072beb509f78652c231879fc84d2a2c011127ca2ea4a92c6527"
+    },
+    {
+      "original": "data/articles-json/Stalin/★★★★★/lun-lunen-zhu-yi-ji-chu.json",
+      "sha256": "cf22ca79f0ecfe2ce7e4357912fae633a163b4a0ba8a8263aeae818165f41f5a"
+    },
+    {
+      "original": "html/articles/Books/short-course.html",
+      "sha256": "8afe99d925b1dfb22e7d18fd3723fa8b5fb5953b964b8b7c79e4c5bb8c97dd22"
+    },
+    {
+      "original": "data/articles-json/Books/short-course.json",
+      "sha256": "4120fa83ed76edf1784637a9209f5fa236d8ef5de02024bf40d7c63a9b69b454"
+    },
+    {
+      "original": "html/articles/Dimitrov/fascism-united-front.html",
+      "sha256": "8375e2ca3d33a25988e64b9bb4ceaca7950314ad7145fe08df2047c22fd1de27"
+    },
+    {
+      "original": "data/articles-json/Dimitrov/fascism-united-front.json",
+      "sha256": "0e9953d816a3681aaa5b5afe51b3a7bb77a9b6db083fc929571396153e6fe9e5"
+    },
+    {
+      "original": "html/articles/Mao/xin-min-zhu.html",
+      "sha256": "fd9fe17c0d80d54b412fe1fe286ad3988e95ed2ac5ad02eaca3f973e9c2aa07a"
+    },
+    {
+      "original": "html/articles/Dimitrov/aid-spain.html",
+      "sha256": "b705a6b45f60f6d24ca18c5f69b5259bc215086db49a8428d807187240a30da5"
+    },
+    {
+      "original": "data/articles-json/Dimitrov/aid-spain.json",
+      "sha256": "2a6ef4c45e5ba8101563000664a11c74867ea4dc00892ac733f2efd6b1c6c119"
+    }
+  ]
+}

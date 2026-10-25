@@ -1,0 +1,11 @@
+{
+  "name": "international-communist-atlas",
+  "private": true,
+  "version": "1.0.0",
+  "description": "国际共运图志：独立历史地图与文献阅读项目",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "build": "node tools/build.mjs",
+    "test": "node tools/check.mjs"
+  }
+}
